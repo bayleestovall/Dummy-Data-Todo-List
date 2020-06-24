@@ -1,4 +1,4 @@
-// We'll pre-populate this array with a couple objects just so it's not undefined if your internet connection isn't working properly.
+
 
 let arrayOfTodos = [
     {
@@ -26,4 +26,22 @@ let arrayOfTodos = [
 
   const populateTodos = () => {
 
+
+ for (i=0; arrayOfTodos.length; i++) {
+   
+    let todoList= document.getElementById("todo-list");
+     
+    let todoItem = "";
+    todoItem= document.createElement("LI");
+
+    let todoTitle="";
+    todoTitle = document.createTextNode(arrayOfTodos[i].title);
+
+    
+    
+
+    todoItem.appendChild(todoTitle);
+
+    todoList.appendChild(todoItem);
+    }
   }
